@@ -1,0 +1,409 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    position: relative;
+    font-family: "Inter", sans-serif; /* Hardcoded font value */
+}
+
+
+html,
+body {
+    scroll-behavior: smooth;
+    overflow: hidden;
+}
+
+body {
+    padding: 25px; /* or your desired value */
+    background: #496DDB; /* or your desired color */
+    color: #1b1e21; /* or your desired color */
+    min-height: 100vh;
+}
+
+
+.row {
+    display: flex;
+    gap: 25px; /* or your desired value */
+    height: 100%;
+}
+
+
+.box {
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    background-color: #EDF7F6; /* or your desired color */
+    height: 100%;
+    width: 100%;
+    border-radius: 8px; /* or your desired value */
+    border: 1px solid #555; /* or your desired color and opacity */
+}
+
+#send-button {
+    color: #1b1e21;
+}
+
+#send-button > button {
+    border: none;
+}
+
+#send-button > button:hover
+{
+    cursor:pointer;
+}
+
+.conversations {
+    max-width: 260px;
+    padding: 25px; /* or your desired value */
+    overflow: auto;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+
+.conversation {
+    width: 100%;
+    min-height: 50%;
+    height: 100vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.conversation #messages {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow-wrap: break-word;
+    overflow-y: inherit;
+    overflow-x: hidden;
+    padding-bottom: 50px;
+}
+
+textarea {
+    box-sizing: border-box;
+    overflow-y: scroll;
+    height: 150px;
+    resize: none;
+}
+textarea::-webkit-scrollbar {
+    height: 0px;
+    width: 0px;
+}
+
+.conversation .user-input {
+    max-height: 10vh;
+}
+
+.conversation .user-input input {
+    font-size: 15px;
+    width: 100%;
+    height: 100%;
+    padding: 12px 15px;
+    background: none;
+    border: none;
+    outline: none;
+    color: #1b1e21; /* or your desired color */
+}
+
+
+.conversation .user-input input::placeholder {
+    color: #aaa; /* or your desired color */
+}
+
+
+.conversations {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    flex: auto;
+    min-width: 0;
+}
+
+.conversations .title {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.conversations .convo {
+    padding: 8px 12px;
+    display: flex;
+    gap: 18px;
+    align-items: center;
+    user-select: none;
+    justify-content: space-between;
+}
+
+.conversations .convo .left {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex: auto;
+    min-width: 0;
+}
+
+.conversations i {
+    color: #1b1e21; /* or your desired color */
+    cursor: pointer;
+}
+
+
+.convo-title {
+    color: #111111; /* or your desired color */
+    font-size: 14px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+.message {
+    width: 100%;
+    overflow-wrap: break-word;
+    display: flex;
+    gap: 25px; /* or your desired value */
+    padding: 25px; /* or your desired value */
+    padding-bottom: 0;
+}
+
+
+.message:last-child {
+    animation: 0.6s show_message;
+}
+
+@keyframes show_message {
+    from {
+        transform: translateY(10px);
+        opacity: 0;
+    }
+}
+
+.message .user {
+    max-width: 48px;
+    max-height: 48px;
+    flex-shrink: 0;
+}
+
+.message .user img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    outline: 1px solid #444444; /* or your desired color and opacity */
+}
+
+.message .user:after {
+    content: "63";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 60%;
+    width: 60%;
+    background: #1b1e21; /* or your desired color */
+    filter: blur(10px) opacity(0.5);
+    z-index: 10000;
+}
+
+.message .content {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    min-width: 0;
+}
+
+.message .content p,
+.message .content li,
+.message .content code {
+    font-size: 15px;
+    line-height: 1.3;
+}
+
+.message .user i {
+    position: absolute;
+    bottom: -6px;
+    right: -6px;
+    z-index: 1000;
+}
+
+.new_convo {
+    padding: 8px 12px;
+    display: flex;
+    gap: 18px;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+    background: transparent;
+    border: 1px dashed #111111; /* or your desired color */
+    border-radius: 8px; /* or your desired value */
+}
+
+.new_convo span {
+    color: #111111; /* or your desired color */
+    font-size: 14px;
+}
+
+
+.new_convo:hover {
+    border-style: solid;
+    color: #0275d8;
+}
+
+
+.buttons {
+    min-height: 10vh;
+    display: flex;
+    align-items: start;
+    justify-content: left;
+    width: 100%;
+}
+
+
+
+.disable-scrollbars::-webkit-scrollbar {
+    width: 0;
+    background: transparent; /* Chrome/Safari/Webkit */
+}
+
+.disable-scrollbars::-webkit-scrollbar-thumb {
+    background-color: transparent; /* Chrome/Safari/Webkit */
+}
+
+
+.disable-scrollbars {
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* IE 10+ */
+}
+
+.input-box {
+    display: flex;
+    align-items: center;
+    padding-right: 15px;
+    cursor: pointer;
+}
+
+
+.bottom_buttons {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.bottom_buttons button {
+    padding: 8px 12px;
+    display: flex;
+    gap: 18px;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+    background: transparent;
+    border: 1px dashed #1b1e21; /* or your desired color */
+    border-radius: 8px; /* or your desired value */
+    width: 100%;
+}
+
+.bottom_buttons button:hover {
+    border: 1px solid #1b1e21;
+}
+
+.bottom_buttons button span {
+    color: #1b1e21; /* or your desired color */
+    font-size: 14px;
+}
+
+.conversations .top {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    overflow: auto;
+}
+
+@keyframes blink {
+    0% {
+        background: #ffffff00;
+    }
+
+    50% {
+        background: white;
+    }
+
+    100% {
+        background: #ffffff00;
+    }
+}
+
+@-webkit-keyframes blink {
+    0% {
+        background: #ffffff00;
+    }
+
+    50% {
+        background: white;
+    }
+
+    100% {
+        background: #ffffff00;
+    }
+}
+
+
+ol,
+ul {
+    padding-left: 20px;
+}
+
+
+@keyframes spinner {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+@media screen and (max-width: 990px) {
+    .conversations {
+        display: none;
+        width: 100%;
+        max-width: none;
+    }
+
+    .buttons {
+        flex-wrap: wrap;
+        gap: 5px;
+        padding-bottom: 10vh;
+        margin-bottom: 10vh;
+    }
+
+}
+
+@media screen and (max-height: 640px) {
+    body {
+        height: 87vh
+    }
+}
+
+a:-webkit-any-link {
+    color: #111111;
+}
+
+.conversation .user-input textarea {
+    font-size: 15px;
+    width: 100%;
+    height: 100%;
+    padding: 12px 15px;
+    background: none;
+    border: none;
+    outline: none;
+    color: #1b1e21; /* or your desired color */
+
+    resize: vertical;
+    max-height: 150px;
+    min-height: 80px;
+}
+

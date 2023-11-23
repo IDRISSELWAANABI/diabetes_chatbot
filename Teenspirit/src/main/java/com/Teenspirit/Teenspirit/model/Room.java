@@ -1,16 +1,24 @@
 package com.Teenspirit.Teenspirit.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Entity
+@AllArgsConstructor
+@NoArgsConstructor
+@Data
+@Table(name="room")
 public class Room {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    @Column(length = 45)
     private String title;
+
+    @Column(nullable = false)
     private Long userId;
 
     // Constructor
@@ -19,18 +27,6 @@ public class Room {
         this.userId = userId;
     }
 
-    // No-args constructor
-    public Room() {
-    }
-
-    // Getters for the fields:
-    public Long getUserId() {
-        return userId;
-    }
-
-    public String getTitle() {
-        return title;
-    }
 
     // Remove a room
     public void removeRoom()

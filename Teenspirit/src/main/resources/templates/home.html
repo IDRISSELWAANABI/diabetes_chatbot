@@ -1,0 +1,132 @@
+<!doctype html >
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+    <!-- Required css -->
+    <link rel="stylesheet" type="text/css" th:href="@{/styles/home.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{/styles/common.css}">
+    <!-- font-awesome icons  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>Home page</title>
+</head>
+<body>
+<div class="parallax filter filter-color-red">
+    <!-- navbar  -->
+    <nav class="navbar navbar-expand-lg fixed-top bg-light navbar-light ">
+        <a class="navbar-brand">Teenspirit</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#testimonials">Testimonials</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#aboutus">About us</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- first section -->
+    <div class="first-section d-flex align-items-center justify-content-center" style="background-image: url('https://images.pexels.com/photos/6941883/pexels-photo-6941883.jpeg?auto=compress&cs=tinysrgb&w=600');">
+        <div  class="header">
+            <h1>Welcome to Teenspirit!!</h1>
+            <p>Discover the empowering world of Teenspirit, your personalized ally in managing diabetes. Navigating diabetes becomes a positive and interactive experience, with Teenspirit offering guidance and encouragement at your fingertips. Embrace the motivation to lead a healthier, more vibrant life. Teenspirit is your partner in every step toward well-being.</p>
+            <a th:href="@{/chat}" class="btn btn-primary btn-lg" id="testimonials">Start a Conversation</a>
+        </div>
+    </div>
+
+    <!-- Testimonials section -->
+    <div class="section-testimonials">
+        <div class="container ">
+            <div class="d-flex justify-content-center mb-4">
+                <div class="header">
+                    <h1 >Testimonials</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum vitae voluptatem tempora ipsam, voluptatum, porro enim assumenda, illum quod quidem quia error. Repellendus similique rerum, dolor dolores doloremque voluptatum dicta!</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="testimonial-card text-center">
+                        <img th:src="@{assets/img/kajal.jpg}" class="img-fluid rounded-circle" alt="">
+                        <h2>Jihane</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                            tempor incididunt ut labore.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="service-card text-center">
+                        <img th:src="@{assets/img/vidyut.jpg}" class="img-fluid rounded-circle" alt="">
+                        <h2>Mustapha</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                            tempor incididunt ut labore.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="service-card text-center">
+                        <img th:src="@{assets/img/yuvi.jpg}" class="img-fluid rounded-circle" alt="">
+                        <h2>Omar</h2>
+                        <p id="contact">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                            tempor incididunt ut labore.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact section -->
+    <div class="contact bg-light">
+        <div class="container">
+            <div class="d-flex justify-content-center mb-4">
+                <div class="header">
+                    <h1>Contact us</h1>
+                    <br>
+                    <form th:action="@{/index}">
+                        <div class="form-group">
+                            <label for="name">Fullname</label>
+                            <input type="text" class="form-control" name="name" placeholder="Fullname">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="text" class="form-control" name="email" placeholder="Email">
+                        </div>
+                        <div class="form-group">
+                            <label for="message"></label>
+                            <textarea name="message" class="form-control" cols="100" rows="10"></textarea>
+                        </div>
+                        <button id="aboutus" type="submit" class="btn btn-primary">Send</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- About us section  -->
+    <div class="who-we-are bg-white">
+        <div class="container">
+            <div class="d-flex justify-content-center mb-4">
+                <div class="header">
+                    <h1>About us</h1>
+                    <hr>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum vitae voluptatem tempora ipsam, voluptatum, porro enim assumenda, illum quod quidem quia error. Repellendus similique rerum, dolor dolores doloremque voluptatum dicta!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

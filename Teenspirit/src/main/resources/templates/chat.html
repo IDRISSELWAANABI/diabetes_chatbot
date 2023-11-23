@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1.0">
+    <link rel="stylesheet" th:href="@{/styles/style.css}">
+    <title>Teenspirit chatbot</title>
+    <script src="https://cdn.jsdelivr.net/npm/markdown-it@latest/dist/markdown-it.min.js"></script>
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@latest/build/styles/base16/dracula.min.css">
+
+</head>
+<body>
+<div class="row">
+    <div class="box conversations">
+        <div class="top">
+            <button class="new_convo">
+                <i class="fa-regular fa-plus"></i>
+                <span>New Conversation</span>
+            </button>
+        </div>
+        <div class="bottom_buttons">
+            <button class="clear-conv">
+                <i class="fa-regular fa-trash"></i>
+                <span>Clear Conversations</span>
+            </button>
+        </div>
+    </div>
+    <div class="conversation disable-scrollbars">
+        <div class="box" id="messages">
+        </div>
+        <div class="user-input">
+            <div class="box input-box">
+                <textarea id="message-input" placeholder="Ask a question" cols="30" rows="10"
+                          style="white-space: pre-wrap;" th:attr="oninput='resizeTextarea(this)'"></textarea>
+                <div id="send-button">
+                    <button type="submit" name="submit">Send</button>
+                </div>
+            </div>
+        </div>
+        <div class="buttons">
+        </div>
+    </div>
+</div>
+<script th:src="@{/js/chat.js}"></script>
+</body>
+</html>

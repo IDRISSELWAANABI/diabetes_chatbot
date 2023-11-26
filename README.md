@@ -14,7 +14,7 @@ Our team composed of :
 [link-id]: https://github.com/IDRISSELWAANABI
 * [Abdelmajid HABOUCH][link-id]
 
-[link-id]: https://github.com/your-username/healthcare-chatbot
+[link-id]: https://github.com/Abdelmajid Habouch
 
 * [Ayoub AOUAD][link-id]
 

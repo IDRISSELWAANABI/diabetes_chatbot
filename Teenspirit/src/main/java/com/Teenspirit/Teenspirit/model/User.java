@@ -1,12 +1,18 @@
 package com.Teenspirit.Teenspirit.model;
 
-import jakarta.persistence.*;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.NoArgsConstructor;
+
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+
 
 @Entity
-@NoArgsConstructor
 @AllArgsConstructor
 @Data
 @Table(name = "user")
@@ -17,35 +23,29 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(nullable = false, unique = true, length = 45)
-    private String username;
-
-    @Column(nullable = false, length = 45)
+    @Column(name = "first_name")
     private String firstName;
     
-    @Column(nullable = false, length = 45)
-    private String LastName;
+    @Column(name = "last_name")
+    private String lastName;
 
-    @Column(nullable = false, unique = true, length = 128)
+    @Column(name = "email", unique = true)
     private String email;
 
-    @Column(nullable = false, length = 64)
+    @Column(name = "password")
     private String password; // Store the hashed password not the actual password !!!!!!!!!!
 
-    // Constructor
-    public User(String username, String email, String password)
+    public User()
     {
-        this.username = username;
+
+    }
+
+    public User(String firstName, String lastName, String email, String password) {
+        this.firstName = firstName;
+        this.lastName = lastName;
         this.email = email;
         this.password = password;
     }
 
-
-    // Verify if a given password is actually a user's password
-    public boolean verifyPassword(String pwd)
-    {
-        // Hash and compare with the stored password:
-        return true;
-    }
 
 }

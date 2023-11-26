@@ -1,9 +1,10 @@
 package com.Teenspirit.Teenspirit.model;
-
+/*
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
 
 @Entity
 @AllArgsConstructor
@@ -40,3 +41,5 @@ public class Room {
         return new Room(title, userId);
     }
 }
+
+ */

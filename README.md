@@ -2,32 +2,22 @@
 This project aims to develop a healthcare chatbot specifically tailored for diabetic individuals to assist them in managing their condition and improving their overall health. The chatbot will provide personalized diabetes management guidance, educational resources, continuous monitoring and alerts, and personalized feedback and motivation.
 
 ## Features
-    Personalized Diabetes Management:
+The chatbot can answer questions about symptoms, causes, prevention, and treatment of various diseases and conditions, such as diabetes, asthma, COVID-19, etc.
 
-        -Track blood sugar levels over time
-        -Set medication reminders
-        -Provide diet and exercise recommendations
-    Educational Resources and Support:
+The chatbot can also provide general health information and tips, such as how to improve sleep quality, how to reduce stress, how to maintain a healthy weight, etc.
 
-        -Offer comprehensive diabetes education
-        -Answer user queries about diabetes management
-        -Provide emotional support
-    Continuous Monitoring and Alerts:
-        
-        -Identify trends in blood sugar patterns
-        -Alert users to potential health risks
-        -Provide a link to healthcare providers   
-    Personalized Feedback and Motivation:
+The chatbot uses Llama2 to generate responses based on the user’s input and the information from Langchain Medical Bot, a reliable and comprehensive medical knowledge base.
 
-        -Track progress towards diabetes management goals
-        -Offer positive reinforcement for adhering to plans
-        -Provide personalized motivational messages
+The chatbot has a user-friendly interface that allows the user to type or speak their questions and receive text or voice responses.
+
+The chatbot has a robust and scalable backend that handles the communication between the interface, Llama2, and Langchain Medical Bot.
+
+The chatbot is finetuned with Gradient service, a cloud platform for machine learning development and deployment, that provides free GPUs and easy integration with Llama2.
 ## Technologies Used
-    Java Enterprise Edition (JEE)
-    Natural Language Processing (NLP)
-    Machine Learning
-    Database
-    Chat Interface
+Java Enterprise Edition (JEE)
+Machine Learning
+Database
+Chat Interface
 
 ## Installation
 Clone the project repository:

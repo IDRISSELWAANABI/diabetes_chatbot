@@ -9,14 +9,13 @@ We are a passionate team of computer science students driven by a shared commitm
 Our motivation stems from the belief that technology has the power to transform lives and solve complex challenges. As computer science enthusiasts, we thrive on the excitement of learning and applying cutting-edge concepts to real-world problems. With a blend of curiosity, creativity, and a strong foundation in computer science principles, we embark on this journey to not just meet expectations but to exceed them.
 Our team composed of : 
 
-* [Idriss EL WAANABI][link-id]
+* [Idriss EL WAANABI][https://github.com/IDRISSELWAANABI]
 
-[link-id]: https://github.com/IDRISSELWAANABI
-* [Abdelmajid HABOUCH][link-id]
 
-[link-id]: https://github.com/mjiid
+* [Abdelmajid HABOUCH][https://github.com/mjiid]
 
-* [Ayoub AOUAD][link-id]
+
+* [Ayoub AOUAD][]
 
 [link-id]: https://github.com/your-username/healthcare-chatbot
 

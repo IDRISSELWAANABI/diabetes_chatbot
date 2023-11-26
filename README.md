@@ -14,7 +14,7 @@ Our team composed of :
 [link-id]: https://github.com/IDRISSELWAANABI
 * [Abdelmajid HABOUCH][link-id]
 
-[link-id]: https://github.com/Abdelmajid Habouch
+[link-id]: https://github.com/mjiid
 
 * [Ayoub AOUAD][link-id]
 

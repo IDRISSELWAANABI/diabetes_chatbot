@@ -17,7 +17,27 @@ Our team composed of :
 
 * [Ayoub AOUAD][]
 
-[link-id]: https://github.com/your-username/healthcare-chatbot
+[link-id]: (https://github.com/your-username/healthcare-chatbot)
+
+# Dependencies
+
+The project uses the following dependencies:
+
+* Spring Boot Starter Data JPA: Provides support for JPA data access and repositories
+* Spring Boot Starter Web: Provides support for Spring MVC web applications
+* Lombok: Simplifies POJO creation by eliminating getters, setters, constructors, and toString methods
+* Spring Security Web and Config: Provides security features for web applications
+* MySQL Connector/J: Provides JDBC connectivity to MySQL databases
+* Spring Boot Starter Test: Provides support for Spring JUnit testing
+* Spring Beans: Provides fundamental Spring functionality
+* Spring Boot Starter Thymeleaf: Provides support for Thymeleaf templating
+* Spring Security Core: Provides core security functionality
+* Spring Boot Starter Security: Provides a convenient way to configure Spring Security
+* Hibernate JPA 2.1 API: Provides the JPA API implementation
+
+
+
+
 
 
 
